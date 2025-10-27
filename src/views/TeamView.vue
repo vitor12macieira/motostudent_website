@@ -40,22 +40,6 @@ const departments = ref([
 </script>
 
 <template>
-    <!-- Hero Section -->
-    <section id="team-hero" class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80" alt="FEUP Racing Team working" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
-        </div>
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
-            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
-                Our <span class="text-green-400">Team</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto md:mx-0">
-                Driving innovation together through passion, expertise, and relentless pursuit of excellence in electric motorsport.
-            </p>
-        </div>
-    </section>
-
     <!-- Team Structure Section -->
     <section class="py-20 bg-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
