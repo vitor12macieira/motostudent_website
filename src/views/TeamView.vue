@@ -10,6 +10,9 @@ const departments = ref([
         members: [
             { name: 'Maria Santos', role: 'Battery Systems Lead', image: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=500' },
             { name: 'Pedro Costa', role: 'Motor Controller', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500' },
+            { name: 'Ana Ferreira', role: 'Telemetry Systems', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500' },
+            { name: 'Ana Ferreira', role: 'Telemetry Systems', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500' },
+            { name: 'Ana Ferreira', role: 'Telemetry Systems', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500' },
             { name: 'Ana Ferreira', role: 'Telemetry Systems', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500' }
         ]
     },
@@ -40,50 +43,74 @@ const departments = ref([
 </script>
 
 <template>
-    <!-- Team Structure Section -->
-    <section class="py-20 bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Meet Our Team</h2>
-                <div class="w-24 h-1 bg-green-400 mx-auto"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-16">
-                <!-- Left Column: Sticky Prototype Image -->
-                <div class="md:col-span-1">
-                    <div class="sticky top-28">
-                        <div class="bg-gray-800 rounded-xl p-4 shadow-2xl">
-                            <img src="/images/prototype.jpeg" alt="Prototype" class="rounded-lg w-full h-auto object-cover">
-                        </div>
-                    </div>
-                </div>
+<section class="py-20 bg-gray-900">
+  <!-- HERO -->
+  <div class="text-center mb-20">
+    <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-6">Meet Our Team</h1>
+    <div class="w-24 h-1 bg-green-400 mx-auto"></div>
+  </div>
 
-                <!-- Right Column: Departments and Members -->
-                <div class="md:col-span-2 space-y-16">
-                    <div v-for="department in departments" :key="department.id">
-                        <div class="text-center mb-12">
-                            <h3 class="text-3xl font-bold text-white mb-4">{{ department.name }}</h3>
-                            <div class="w-20 h-1 bg-green-400 mx-auto"></div>
-                        </div>
-                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-8">
-                            <div 
-                                v-for="(member, memberIndex) in department.members" 
-                                :key="member.name" 
-                                class="team-member-card text-center"
-                                :style="{ animationDelay: `${memberIndex * 100}ms` }"
-                            >
-                                <div class="relative inline-block">
-                                    <img :src="member.image" :alt="member.name" class="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-transparent transition-all duration-300">
-                                </div>
-                                <h4 class="text-lg font-bold text-white">{{ member.name }}</h4>
-                                <p class="text-green-400 text-sm">{{ member.role }}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div class="grid md:grid-cols-5 gap-16 container mx-auto px-6">
+    
+    <!-- IMAGEM À ESQUERDA -->
+    <div class="md:col-span-2">
+      <div class="sticky top-32">
+        <div class="bg-gray-800 rounded-xl p-4 shadow-2xl relative">
+          <img
+            src="/images/prototype.jpeg"
+            alt="Prototype"
+            class="rounded-lg w-full h-auto object-cover"
+          />
+          <div class="text-center mt-4">
+            <button
+              class="bg-green-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-400 transition"
+            >
+              See Details
+            </button>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+
+    <!-- EQUIPA À DIREITA -->
+    <div class="md:col-span-3 flex flex-col space-y-20">
+      <div
+        v-for="department in departments"
+        :key="department.id"
+        class="ml-auto w-fit"
+      >
+        <!-- Nome do departamento -->
+        <div class="mb-6">
+          <h3 class="text-4xl font-bold text-white mb-3 text-center">{{ department.name }}</h3>
+          <div class="w-20 h-1 bg-green-400 ml-auto mb-4"></div>
+        </div>
+
+        <!-- Membros -->
+        <div class="flex flex-wrap justify-end gap-10">
+          <div
+            v-for="(member, memberIndex) in department.members"
+            :key="member.name"
+            class="text-center team-member-card"
+            :style="{ animationDelay: `${memberIndex * 100}ms` }"
+          >
+            <div class="relative inline-block">
+              <img
+                :src="member.image"
+                :alt="member.name"
+                class="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-transparent transition-all duration-300"
+              />
+            </div>
+            <h4 class="text-lg font-bold text-white">{{ member.name }}</h4>
+            <p class="text-green-400 text-base">{{ member.role }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- Join Our Ranks CTA -->
     <section class="py-20 bg-white">
@@ -106,6 +133,7 @@ const departments = ref([
     transform: translateY(20px);
     opacity: 0;
     animation: fade-in-up 0.6s ease-out forwards;
+    transition: transform 0.3s ease;
 }
 
 @keyframes fade-in-up {
@@ -116,7 +144,8 @@ const departments = ref([
 }
 
 .team-member-card:hover {
-    transform: translateY(-5px);
+    /* Agora sobe E aumenta de tamanho */
+    transform: translateY(-5px) scale(1.05); 
 }
 
 .team-member-card img {
@@ -125,6 +154,6 @@ const departments = ref([
 
 .team-member-card:hover img {
     border-color: #4ade80; /* green-400 */
-    transform: scale(1.05);
+    /* O 'transform: scale(1.05)' foi removido daqui */
 }
 </style>
