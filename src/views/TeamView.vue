@@ -8,12 +8,12 @@ const departments = ref([
         memberCount: '5 Engineers',
         icon: 'fas fa-microchip',
         members: [
-            { name: 'Maria Santos', role: 'Battery Systems Lead', image: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=500' },
-            { name: 'Pedro Costa', role: 'Motor Controller', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500' },
-            { name: 'Ana Ferreira', role: 'Telemetry Systems', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500' },
-            { name: 'Ana Ferreira', role: 'Telemetry Systems', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500' },
-            { name: 'Ana Ferreira', role: 'Telemetry Systems', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500' },
-            { name: 'Ana Ferreira', role: 'Telemetry Systems', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500' }
+            { name: 'Maria Santos', role: 'Battery Systems Lead', image: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=500', email: 'maria.santos@example.com', linkedin: 'https://www.linkedin.com/in/mariasantos' },
+            { name: 'Pedro Costa', role: 'Motor Controller', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500', email: 'pedro.costa@example.com', linkedin: 'https://www.linkedin.com/in/pedrocosta' },
+            { name: 'Ana Ferreira', role: 'Telemetry Systems', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500', email: 'ana.ferreira@example.com', linkedin: 'https://www.linkedin.com/in/anaferreira' },
+            { name: 'João Silva', role: 'Power Electronics', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500', email: 'joao.silva@example.com', linkedin: 'https://www.linkedin.com/in/joaosilva' },
+            { name: 'Sofia Martins', role: 'Embedded Systems', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500', email: 'sofia.martins@example.com', linkedin: 'https://www.linkedin.com/in/sofiamartins' },
+            { name: 'Ricardo Gomes', role: 'Sensor Integration', image: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500', email: 'ricardo.gomes@example.com', linkedin: 'https://www.linkedin.com/in/ricardogomes' }
         ]
     },
     {
@@ -100,6 +100,14 @@ const departments = ref([
                 :alt="member.name"
                 class="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-transparent transition-all duration-300"
               />
+              <div class="flex justify-center gap-4 mt-3">
+              <a :href="'mailto:' + member.email" class="text-gray-400 hover:text-green-400 transition-colors">
+                <i class="fas fa-envelope text-xl"></i>
+              </a>
+              <a :href="member.linkedin" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-green-400 transition-colors">
+                <i class="fab fa-linkedin text-xl"></i>
+              </a>
+            </div>
             </div>
             <h4 class="text-lg font-bold text-white">{{ member.name }}</h4>
             <p class="text-green-400 text-base">{{ member.role }}</p>
