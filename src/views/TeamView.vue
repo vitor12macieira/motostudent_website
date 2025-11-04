@@ -24,7 +24,9 @@ const departments = ref([
         members: [
             { name: 'Carlos Oliveira', role: 'Chassis Design Lead', image: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500' },
             { name: 'Sofia Almeida', role: 'Suspension Engineer', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500' },
-            { name: 'Ricardo Pereira', role: 'Aerodynamics', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500' }
+            { name: 'Ricardo Pereira', role: 'Aerodynamics', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500' },
+            { name: 'Sofia Martins', role: 'Embedded Systems', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500', email: 'sofia.martins@example.com', linkedin: 'https://www.linkedin.com/in/sofiamartins' },
+            { name: 'Ricardo Gomes', role: 'Sensor Integration', image: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500', email: 'ricardo.gomes@example.com', linkedin: 'https://www.linkedin.com/in/ricardogomes' }
         ]
     },
     {
@@ -51,7 +53,7 @@ const departments = ref([
   </div>
 
   <!-- CONTEÚDO PRINCIPAL -->
-  <div class="grid md:grid-cols-5 gap-16 container mx-auto px-6">
+  <div class="grid md:grid-cols-5 gap-24 container mx-auto px-6">
     
     <!-- IMAGEM À ESQUERDA -->
     <div class="md:col-span-2">
@@ -78,27 +80,27 @@ const departments = ref([
       <div
         v-for="department in departments"
         :key="department.id"
-        class="ml-auto w-fit"
+        class="mx-auto"
       >
         <!-- Nome do departamento -->
         <div class="mb-6">
           <h3 class="text-4xl font-bold text-white mb-3 text-center">{{ department.name }}</h3>
-          <div class="w-20 h-1 bg-green-400 ml-auto mb-4"></div>
+          <div class="w-20 h-1 bg-green-400 mx-auto"></div>
         </div>
 
         <!-- Membros -->
-        <div class="flex flex-wrap justify-end gap-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-items-center">
           <div
             v-for="(member, memberIndex) in department.members"
             :key="member.name"
-            class="text-center team-member-card"
+            class="text-center"
             :style="{ animationDelay: `${memberIndex * 100}ms` }"
           >
             <div class="relative inline-block">
               <img
                 :src="member.image"
                 :alt="member.name"
-                class="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-transparent transition-all duration-300"
+                class="w-32 h-32 rounded-full object-cover mx-auto mb-4 border-4 border-transparent transition-all duration-300 hover:border-green-400"
               />
               <div class="flex justify-center gap-4 mt-3">
               <a :href="'mailto:' + member.email" class="text-gray-400 hover:text-green-400 transition-colors">
@@ -117,51 +119,5 @@ const departments = ref([
     </div>
   </div>
 </section>
-
-
-
-    <!-- Join Our Ranks CTA -->
-    <section class="py-20 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="bg-gradient-to-r from-green-400 to-green-600 rounded-2xl p-12 text-white">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Join Our Ranks</h2>
-                <p class="text-xl mb-8 leading-relaxed">
-                    Ready to be part of the future of electric motorsport? We're always looking for passionate engineers, designers, and innovators to join our team.
-                </p>
-                <router-link to="/contactus" class="bg-white text-green-600 hover:bg-gray-100 font-bold py-4 px-8 text-lg transition-all duration-300 transform hover:scale-105 cursor-pointer rounded-lg inline-block">
-                    Contact Us to Apply
-                </router-link>
-            </div>
-        </div>
-    </section>
 </template>
 
-<style scoped>
-.team-member-card {
-    transform: translateY(20px);
-    opacity: 0;
-    animation: fade-in-up 0.6s ease-out forwards;
-    transition: transform 0.3s ease;
-}
-
-@keyframes fade-in-up {
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.team-member-card:hover {
-    /* Agora sobe E aumenta de tamanho */
-    transform: translateY(-5px) scale(1.05); 
-}
-
-.team-member-card img {
-    transition: border-color 0.3s ease, transform 0.3s ease;
-}
-
-.team-member-card:hover img {
-    border-color: #4ade80; /* green-400 */
-    /* O 'transform: scale(1.05)' foi removido daqui */
-}
-</style>

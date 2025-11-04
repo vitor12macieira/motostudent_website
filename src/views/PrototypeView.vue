@@ -16,7 +16,7 @@ const prototypes = ref([
             range: "200 km",
             weight: "180 kg"
         },
-        detailsPage: '/team/prototype-1' // Rota para a página de detalhes
+        detailsPage: '/team/prototype-1'
     },
     {
         id: 2,
