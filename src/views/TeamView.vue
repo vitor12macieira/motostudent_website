@@ -2,11 +2,21 @@
 import { ref } from 'vue';
 
 const departments = ref([
+      {
+        id: 'leaders',
+        name: 'Leaders',
+        members: [
+            { name: 'João Morais', role: 'Team Leader', image: '../../public/images/team/joaomorais.jpg', email: 'up202105264@up.pt', linkedin: 'https://www.linkedin.com/in/jo%C3%A3o-morais-050917259/' },
+            { name: 'Diogo Sousa', role: 'Electronics Dep. Leader', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500', email: 'pedro.costa@example.com', linkedin: 'https://www.linkedin.com/in/pedrocosta' },
+            { name: 'Ana Ferreira', role: 'Telemetry Systems', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500', email: 'ana.ferreira@example.com', linkedin: 'https://www.linkedin.com/in/anaferreira' },
+            { name: 'João Silva', role: 'Power Electronics', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500', email: 'joao.silva@example.com', linkedin: 'https://www.linkedin.com/in/joaosilva' },
+            { name: 'Sofia Martins', role: 'Embedded Systems', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500', email: 'sofia.martins@example.com', linkedin: 'https://www.linkedin.com/in/sofiamartins' },
+            { name: 'Ricardo Gomes', role: 'Sensor Integration', image: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500', email: 'ricardo.gomes@example.com', linkedin: 'https://www.linkedin.com/in/ricardogomes' }
+        ]
+    },
     {
         id: 'electronics',
         name: 'Electronics',
-        memberCount: '5 Engineers',
-        icon: 'fas fa-microchip',
         members: [
             { name: 'Maria Santos', role: 'Battery Systems Lead', image: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=500', email: 'maria.santos@example.com', linkedin: 'https://www.linkedin.com/in/mariasantos' },
             { name: 'Pedro Costa', role: 'Motor Controller', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500', email: 'pedro.costa@example.com', linkedin: 'https://www.linkedin.com/in/pedrocosta' },
@@ -19,8 +29,6 @@ const departments = ref([
     {
         id: 'mechanics',
         name: 'Mechanics',
-        memberCount: '6 Engineers',
-        icon: 'fas fa-wrench',
         members: [
             { name: 'Carlos Oliveira', role: 'Chassis Design Lead', image: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500' },
             { name: 'Sofia Almeida', role: 'Suspension Engineer', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500' },
@@ -32,8 +40,6 @@ const departments = ref([
     {
         id: 'operations',
         name: 'Operations',
-        memberCount: '4 Members',
-        icon: 'fas fa-chart-line',
         members: [
             { name: 'Inês Rodrigues', role: 'Project Manager', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500' },
             { name: 'Miguel Sousa', role: 'Marketing & Media', image: 'https://images.unsplash.com/photo-1521119989659-a83eee488004?w=500' },

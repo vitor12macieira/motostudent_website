@@ -52,7 +52,7 @@ const isSuccessMessage = ref(false);
     <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
         <!-- Team photo background -->
         <div class="absolute inset-0 z-0">
-            <img src="/images/team/IMG_8322.jpg" alt="FEUP Racing Team" class="w-full h-full object-cover object-center">
+            <img src="/images/team/Equipa_Frente1.jpg" alt="FEUP Racing Team" class="w-full h-full object-cover object-center">
             
             <!-- More visible gradients from top and bottom to middle -->
             <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-transparent" style="height: 60%;"></div>
