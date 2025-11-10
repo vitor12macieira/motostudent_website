@@ -27,18 +27,43 @@ const departments = ref([
       { name: 'Martinho Figueiredo', image: defaultImage, email: 'up201506179@up.pt', linkedin: ''},
       { name: 'Guilherme Costa', image: defaultImage, email: 'up202108125@up.pt', linkedin: 'https://www.linkedin.com/in/guilherme-costa-5b063926a/' },
       { name: 'Lucas Feijó', image: defaultImage, email: 'up202000145@up.pt', linkedin: 'https://www.linkedin.com/in/lucas-feij%C3%B3-29468117b/' }
-
     ]
   },
   {
-    id: 'mechanics',
-    name: 'Mechanics',
+    id: 'mechanics-structures',
+    name: 'Mechanics Structures',
     members: [
-      { name: 'Carlos Oliveira', role: 'Chassis Design Lead', image: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500' },
-      { name: 'Sofia Almeida', role: 'Suspension Engineer', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500' },
-      { name: 'Ricardo Pereira', role: 'Aerodynamics', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500' },
-      { name: 'Sofia Martins', role: 'Embedded Systems', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500', email: 'sofia.martins@example.com', linkedin: 'https://www.linkedin.com/in/sofiamartins' },
-      { name: 'Ricardo Gomes', role: 'Sensor Integration', image: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500', email: 'ricardo.gomes@example.com', linkedin: 'https://www.linkedin.com/in/ricardogomes' }
+      { name: 'José Sousa', image: '/images/team/duartesousa.jpg', email: 'up202008584@up.pt', linkedin: 'https://www.linkedin.com/in/duartesousa22/' },
+      { name: 'João Coelho', image: '/images/team/joaocoelho.jpg', email: 'up202106609@up.pt', linkedin: 'https://www.linkedin.com/in/jo%C3%A3o-coelho-751831309/' },
+      { name: 'Alexandre Laia', image: defaultImage, email: 'up202105084@up.pt', linkedin: 'https://www.linkedin.com/in/alexandre-laia-456283273/' },
+      { name: 'Bernardo Félix', image: defaultImage, email: 'up202105213@up.pt', linkedin: 'https://www.linkedin.com/in/bernardo-f%C3%A9lix-278262271/' },
+      { name: 'Diogo Guimarães', image: defaultImage, email: 'up202305358@up.pt', linkedin: 'https://www.linkedin.com/in/diogo-guimar%C3%A3es-1302842b9/' }
+    ]
+  },
+  {
+    id: 'mechanics-aerodynamics-cooling',
+    name: 'Mechanics Aerodynamics and Cooling',
+    members: [
+      { name: 'Daniel Costa', image: '/images/team/danielcosta.jpg', email: 'up202207519@up.pt', linkedin: 'https://www.linkedin.com/in/danielfilipemartinscosta/' },
+      { name: 'Carina Silva', image: '/images/team/carina.jpg', email: 'up202208515@up.pt', linkedin: 'https://www.linkedin.com/in/carina-taves-lage/' },
+      { name: 'Francisco Lima', image: '/images/team/lima.jpg', email: 'up202208685@up.pt', linkedin: 'https://www.linkedin.com/in/francisco-castro-alves-lima/' },
+    ]
+  },
+  {
+    id: 'mechanics-drivetrain',
+    name: 'Mechanics Drivetrain',
+    members: [
+        { name: 'Daniel Costa', image: '/images/team/danielcosta.jpg', email: 'up202207519@up.pt', linkedin: 'https://www.linkedin.com/in/danielfilipemartinscosta/' },
+      { name: 'Carina Silva', image: '/images/team/carina.jpg', email: 'up202208515@up.pt', linkedin: 'https://www.linkedin.com/in/carina-taves-lage/' },
+      { name: 'Francisco Lima', image: '/images/team/lima.jpg', email: 'up202208685@up.pt', linkedin: 'https://www.linkedin.com/in/francisco-castro-alves-lima/' },
+    ]
+  },
+  {
+    id: 'mechanics-dynamics-suspension',
+    name: 'Mechanics Dynamics and Suspension',
+    members: [
+      { name: 'António Noronha', image: '/images/team/antonionoronha2.jpg', email: 'up202006370@up.pt', linkedin: ''  },
+      { name: 'Rafael Silva', image: defaultImage, email: 'up202107154@up.pt', linkedin: ''  },
     ]
   },
   {
