@@ -23,7 +23,11 @@ const departments = ref([
       { name: 'Francisco Lima', image: '/images/team/lima.jpg', email: 'up202208685@up.pt', linkedin: 'https://www.linkedin.com/in/francisco-castro-alves-lima/' },
       { name: 'Lucca Garcia', image: defaultImage, email: 'up201900181@up.pt', linkedin: 'https://www.linkedin.com/in/luccagarcia/' },
       { name: 'João Ribeiro', image: defaultImage, email: 'up202105905@up.pt', linkedin: 'https://www.linkedin.com/in/joao-ribeiro-9960b426b/' },
-      { name: 'Tiago Pintado', image: defaultImage, email: 'up202105126@up.pt', linkedin: 'https://www.linkedin.com/in/tiago-pintado-7302b7228/' }
+      { name: 'Tiago Pintado', image: defaultImage, email: 'up202105126@up.pt', linkedin: 'https://www.linkedin.com/in/tiago-pintado-7302b7228/' },
+      { name: 'Martinho Figueiredo', image: defaultImage, email: 'up201506179@up.pt', linkedin: ''},
+      { name: 'Guilherme Costa', image: defaultImage, email: 'up202108125@up.pt', linkedin: 'https://www.linkedin.com/in/guilherme-costa-5b063926a/' },
+      { name: 'Lucas Feijó', image: defaultImage, email: 'up202000145@up.pt', linkedin: 'https://www.linkedin.com/in/lucas-feij%C3%B3-29468117b/' }
+
     ]
   },
   {
@@ -41,9 +45,13 @@ const departments = ref([
     id: 'operations',
     name: 'Operations',
     members: [
-      { name: 'Inês Rodrigues', role: 'Project Manager', image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500' },
-      { name: 'Miguel Sousa', role: 'Marketing & Media', image: 'https://images.unsplash.com/photo-1521119989659-a83eee488004?w=500' },
-      { name: 'Beatriz Lima', role: 'Finance & Sponsors', image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500' }
+      { name: 'João Costa', email: 'up202109931@up.pt', image: '/images/team/lumini.jpg', linkedin: 'https://www.linkedin.com/in/jo%C3%A3o-lumini-87672a281/' },
+      { name: 'Luis Avila', email: 'up201900570@up.pt', image: '/images/team/luis.jpg', linkedin: 'https://www.linkedin.com/in/luis-felipe-avila/'  },
+      { name: 'Rodrigo Gomes', email: 'up202207233@up.pt', image: '/images/team/rodrigogomes.jpg', linkedin: 'https://www.linkedin.com/in/rodrigofnsgomes/'  },
+      { name: 'Diana Graça', email: 'up202107741@up.pt', image: defaultImage , linkedin: ''  },
+      { name: 'Maria Almeida', email: 'up201905225@up.pt', image: defaultImage, linkedin: 'https://www.linkedin.com/in/maria-almeida-27072124a/'  },
+      { name: 'Brenda Franco', email: 'up202101377@up.pt', image: defaultImage, linkedin: ''  },
+      { name: 'Mariana Soares', email: 'up202208236@up.pt', image: defaultImage, linkedin: 'https://www.linkedin.com/in/mariana-soares-7bb600276/'  }
     ]
   }
 ]);
