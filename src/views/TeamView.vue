@@ -1,8 +1,10 @@
 <script setup>
 import { ref } from 'vue';
 
+// A variável 'defaultImage' é usada para membros sem foto
 const defaultImage = '/images/team/nophoto.png';
 
+// 'ref' torna a lista de departamentos reativa
 const departments = ref([
   {
     id: 'leaders',
@@ -44,18 +46,28 @@ const departments = ref([
     id: 'mechanics-aerodynamics-cooling',
     name: 'Mechanics Aerodynamics and Cooling',
     members: [
-      { name: 'Daniel Costa', image: '/images/team/danielcosta.jpg', email: 'up202207519@up.pt', linkedin: 'https://www.linkedin.com/in/danielfilipemartinscosta/' },
-      { name: 'Carina Silva', image: '/images/team/carina.jpg', email: 'up202208515@up.pt', linkedin: 'https://www.linkedin.com/in/carina-taves-lage/' },
-      { name: 'Francisco Lima', image: '/images/team/lima.jpg', email: 'up202208685@up.pt', linkedin: 'https://www.linkedin.com/in/francisco-castro-alves-lima/' },
+      { name: 'José Morais', image: '/images/team/josemorais.jpg', email: 'up201905867@up.pt', linkedin: 'https://www.linkedin.com/in/jos%C3%A9-miguel-morais-918614265/' },
+      { name: 'Tiago Costa', image: '/images/team/tiagocosta.jpg', email: 'up202007835@up.pt', linkedin: 'https://www.linkedin.com/in/tiago-costa-131bb1259/' },
+      { name: 'Dinis Sousa', image: '/images/team/dinissousa.jpg', email: 'up202006788@up.pt', linkedin: 'https://www.linkedin.com/in/dinisgomessousa/' },
+      { name: 'Diogo Pinho', image: '/images/team/diogopinho.jpg', email: 'up202205979@up.pt', linkedin: 'https://www.linkedin.com/in/diogo-pinho-1104982b8/' },
+      { name: 'Miguel Costa', image: '/images/team/miguelcarvalho.jpg', email: 'up202208869@up.pt', linkedin: 'https://www.linkedin.com/in/miguelcvcosta/' },
+      { name: 'Gonçalo Queiroz', image: defaultImage, email: 'up202104550@up.pt', linkedin: 'https://www.linkedin.com/in/gon%C3%A7aloqueiroz18/' },
+      { name: 'Diogo Freitas', image: defaultImage, email: 'up202107575@up.pt', linkedin: '' },
+      { name: 'João Costa', image: defaultImage, email: 'up202307613@up.pt', linkedin: '' },
+      { name: 'João Antunes', image: defaultImage, email: 'up202105737@up.pt', linkedin: 'https://www.linkedin.com/in/jo%C3%A3o-duarte-antunes-2b988820b/' },
+      { name: 'Catarina Brites', image: defaultImage, email: 'up202409830@up.pt', linkedin: 'https://www.linkedin.com/in/catarina-brites-67622824a/' },
     ]
   },
   {
     id: 'mechanics-drivetrain',
     name: 'Mechanics Drivetrain',
     members: [
-        { name: 'Daniel Costa', image: '/images/team/danielcosta.jpg', email: 'up202207519@up.pt', linkedin: 'https://www.linkedin.com/in/danielfilipemartinscosta/' },
-      { name: 'Carina Silva', image: '/images/team/carina.jpg', email: 'up202208515@up.pt', linkedin: 'https://www.linkedin.com/in/carina-taves-lage/' },
-      { name: 'Francisco Lima', image: '/images/team/lima.jpg', email: 'up202208685@up.pt', linkedin: 'https://www.linkedin.com/in/francisco-castro-alves-lima/' },
+      { name: 'Tomás Lopes', image: '/images/team/tomas.jpg', email: 'up202107511@up.pt', linkedin: 'https://www.linkedin.com/in/tom%C3%A1scostalopes/' },
+      { name: 'Rafael Homsi', image: '/images/team/rafaelhomsi.jpg', email: 'up201900185@up.pt', linkedin: 'https://www.linkedin.com/in/rafaelhhomsi/' },
+      { name: 'Miguel Simões', image: '/images/team/miguelsimões.jpg', email: 'up202306859@up.pt', linkedin: 'https://www.linkedin.com/in/miguel-sim%C3%B5es-107735289/' },
+      { name: 'Rafael Ramos', image: '/images/team/rafaelramos.jpg', email: 'up202303466@up.pt', linkedin: 'https://www.linkedin.com/in/rafael-ramos-1b07a52a7/' },
+      { name: 'Mário Freitas', image: defaultImage, email: 'up202105180@up.pt', linkedin: 'https://www.linkedin.com/in/m%C3%A1rio-freitas-b6552b240/' },
+      { name: 'Rafael Osório', image: defaultImage, email: 'up202210302@up.pt', linkedin: '' },
     ]
   },
   {
@@ -83,84 +95,110 @@ const departments = ref([
 </script>
 
 <template>
-  <section class="py-20 bg-gray-900 text-white">
-    <!-- HERO -->
-    <div class="text-center mb-20 mt-15">
-      <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Equipa Prototipo 1</h1>
-      <div class="w-24 h-1 bg-green-400 mx-auto"></div>
-    </div>
+  <div class="bg-gray-900 text-white">
+    
+    <section class="relative pt-48 pb-24 flex items-center justify-center text-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="/images/team/Equipa_Frente1.jpg" alt="FEUP Racing Team" class="w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent"></div>
+      </div>
+      <div class="relative z-10 px-4">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-lg">A Nossa Equipa</h1>
+        <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+          Apaixonados por engenharia, movidos pela inovação.
+        </p>
 
-    <!-- MAIN GRID -->
-    <div class="grid md:grid-cols-5 gap-16 container mx-auto px-6">
-      
-      <!-- LEFT IMAGE -->
-      <div class="md:col-span-2">
-        <div class="sticky top-32">
-          <div class="bg-gray-800 rounded-xl p-4 shadow-2xl">
-            <img
-              src="/images/prototype.jpeg"
-              alt="Prototype"
-              class="rounded-lg w-full object-cover"
-            />
-            <div class="text-center mt-4">
-              <button
-                class="bg-green-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-400 transition-colors"
-              >
-                See Details
-              </button>
+        <!-- Seletor de Protótipo -->
+        <div class="mt-10 flex items-center justify-center space-x-6">
+          <button class="text-white hover:text-green-400 transition-colors p-2 rounded-full hover:bg-white/10">
+            <i class="fas fa-chevron-left text-2xl"></i>
+          </button>
+          <span class="text-2xl font-semibold text-green-400 tracking-wider">Protótipo 1</span>
+          <button class="text-white hover:text-green-400 transition-colors p-2 rounded-full hover:bg-white/10">
+            <i class="fas fa-chevron-right text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-12 pb-24">
+
+      <div class="grid md:grid-cols-5 gap-16 container mx-auto px-6">
+        
+        <div class="md:col-span-2">
+          <div class="sticky top-[23vh] max-w-md">
+            <div class="bg-gray-800 rounded-xl p-4 shadow-2xl">
+              <router-link to="/prototype">
+                <img
+                  src="/images/prototype.jpeg"
+                  alt="Prototype"
+                  class="rounded-lg w-full object-cover cursor-pointer transition-all duration-300 ease-in-out hover:opacity-90 hover:scale-105"
+                />
+              </router-link>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- RIGHT SIDE (TEAM) -->
-      <div class="md:col-span-3 flex flex-col space-y-20">
-        <div
-          v-for="department in departments"
-          :key="department.id"
-          class="text-center"
-        >
-          <!-- Department Name -->
-          <h3 class="text-4xl font-bold mb-3">{{ department.name }}</h3>
-          <div class="w-20 h-1 bg-green-400 mx-auto mb-8"></div>
+        <div class="md:col-span-3 flex flex-col space-y-20">
+          
+          <div
+            v-for="department in departments"
+            :key="department.id"
+            class="text-center"
+          >
+            <h3 class="text-4xl font-bold mb-3">{{ department.name }}</h3>
+            <div class="w-20 h-1 bg-green-400 mx-auto mb-8"></div>
 
-          <!-- Members -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 justify-items-center">
-            <div
-              v-for="(member, i) in department.members"
-              :key="member.name"
-              class="text-center transition-all duration-300"
-              :style="{ animationDelay: `${i * 100}ms` }"
-            >
-              <img
-                :src="member.image"
-                class="w-36 h-36 rounded-full object-cover mx-auto mb-4 border-4 border-transparent hover:border-green-400 transition-colors"
-              />
-              <h4 class="text-lg font-bold">{{ member.name }}</h4>
-              <p v-if="member.role" class="text-green-400">{{ member.role }}</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-12 justify-items-center">
               
-              <div v-if="member.email || member.linkedin" class="flex justify-center gap-4 mt-3">
-                <a
-                  v-if="member.email"
-                  :href="'mailto:' + member.email"
-                  class="text-gray-400 hover:text-green-400 transition-colors"
-                >
-                  <i class="fas fa-envelope text-xl"></i>
-                </a>
-                <a
-                  v-if="member.linkedin"
-                  :href="member.linkedin"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-gray-400 hover:text-green-400 transition-colors"
-                >
-                  <i class="fab fa-linkedin text-xl"></i>
-                </a>
+              <div
+                v-for="(member, i) in department.members"
+                :key="member.name"
+                class="text-center transition-all duration-300"
+                :style="{ animationDelay: `${i * 100}ms` }"
+              >
+                <div class="p-1 rounded-full bg-gradient-to-tr from-green-500 to-gray-700 hover:from-green-400 hover:to-green-500 transition-all duration-300 w-40 h-40 mx-auto mb-4">
+                  <img
+                    :src="member.image"
+                    alt=""
+                    class="w-full h-full rounded-full object-cover object-top border-4 border-gray-900"
+                  />
+                </div>
+                
+                <h4 class="text-lg font-bold">{{ member.name }}</h4>
+                <p v-if="member.role" class="text-green-400">{{ member.role }}</p>
+                
+                <div v-if="member.email || member.linkedin" class="flex justify-center gap-4 mt-3">
+                  <a
+                    v-if="member.email"
+                    :href="'mailto:' + member.email"
+                    class="text-gray-400 hover:text-green-400 transition-colors"
+                  >
+                    <i class="fas fa-envelope text-xl"></i>
+                  </a>
+                  <a
+                    v-if="member.linkedin"
+                    :href="member.linkedin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-gray-400 hover:text-green-400 transition-colors"
+                  >
+                    <i class="fab fa-linkedin text-xl"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </div>
 </template>
+
+<style scoped>
+/* Esta é a ÚNICA tag <style>
+  Adicione aqui estilos específicos, se necessário.
+  'scoped' garante que estes estilos só se aplicam a este componente.
+*/
+</style>
