@@ -97,16 +97,13 @@ const departments = ref([
 <template>
   <div class="bg-gray-900 text-white">
     
-    <section class="relative pt-48 pb-24 flex items-center justify-center text-center overflow-hidden">
+<section class="relative pt-48 pb-24 flex items-center justify-center text-center overflow-hidden">
       <div class="absolute inset-0 z-0">
         <img src="/images/team/Equipa_Frente1.jpg" alt="FEUP Racing Team" class="w-full h-full object-cover opacity-30">
-        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent"></div>
+        <div class="absolute inset-0 bg-linear-to-t from-gray-900 via-gray-900/70 to-transparent"></div>
       </div>
       <div class="relative z-10 px-4">
         <h1 class="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-lg">A Nossa Equipa</h1>
-        <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-          Apaixonados por engenharia, movidos pela inovação.
-        </p>
 
         <!-- Seletor de Protótipo -->
         <div class="mt-10 flex items-center justify-center space-x-6">
@@ -130,7 +127,7 @@ const departments = ref([
             <div class="bg-gray-800 rounded-xl p-4 shadow-2xl">
               <router-link to="/prototype">
                 <img
-                  src="/images/prototype.jpeg"
+                  src="/images/prototype2.jpeg"
                   alt="Prototype"
                   class="rounded-lg w-full object-cover cursor-pointer transition-all duration-300 ease-in-out hover:opacity-90 hover:scale-105"
                 />
@@ -157,7 +154,7 @@ const departments = ref([
                 class="text-center transition-all duration-300"
                 :style="{ animationDelay: `${i * 100}ms` }"
               >
-                <div class="p-1 rounded-full bg-gradient-to-tr from-green-500 to-gray-700 hover:from-green-400 hover:to-green-500 transition-all duration-300 w-40 h-40 mx-auto mb-4">
+                <div class="p-1 rounded-full bg-linear-to-tr from-green-500 to-gray-700 hover:from-green-400 hover:to-green-500 transition-all duration-300 w-40 h-40 mx-auto mb-4">
                   <img
                     :src="member.image"
                     alt=""
