@@ -103,14 +103,14 @@ const departments = ref([
         <div class="absolute inset-0 bg-linear-to-t from-gray-900 via-gray-900/70 to-transparent"></div>
       </div>
       <div class="relative z-10 px-4">
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-lg">A Nossa Equipa</h1>
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-lg">Our Team</h1>
 
         <!-- Seletor de Protótipo -->
         <div class="mt-10 flex items-center justify-center space-x-6">
           <button class="text-white hover:text-green-400 transition-colors p-2 rounded-full hover:bg-white/10">
             <i class="fas fa-chevron-left text-2xl"></i>
           </button>
-          <span class="text-2xl font-semibold text-green-400 tracking-wider">Protótipo 1</span>
+          <span class="text-2xl font-semibold text-green-400 tracking-wider">Prototype 1</span>
           <button class="text-white hover:text-green-400 transition-colors p-2 rounded-full hover:bg-white/10">
             <i class="fas fa-chevron-right text-2xl"></i>
           </button>
@@ -124,12 +124,12 @@ const departments = ref([
         
         <div class="md:col-span-2">
           <div class="sticky top-[23vh] max-w-md">
-            <div class="bg-gray-800 rounded-xl p-4 shadow-2xl">
+            <div>
               <router-link to="/prototype">
                 <img
                   src="/images/prototype2.jpeg"
                   alt="Prototype"
-                  class="rounded-lg w-full object-cover cursor-pointer transition-all duration-300 ease-in-out hover:opacity-90 hover:scale-105"
+                  class="rounded-lg w-full h-122 object-cover object-bottom cursor-pointer transition-all duration-300 ease-in-out hover:opacity-90 hover:scale-105"
                 />
               </router-link>
             </div>
@@ -189,13 +189,19 @@ const departments = ref([
         </div>
       </div>
     </section>
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-linear-to-r from-green-400 to-green-600 rounded-2xl p-12 text-white">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Join Our Ranks</h2>
+                <p class="text-xl mb-8 leading-relaxed">
+                    Ready to be part of the future of electric motorsport? We're always looking for passionate engineers, designers, and innovators to join our team.
+                </p>
+                <router-link to="/contactus" class="bg-white text-green-600 hover:bg-gray-100 font-bold py-4 px-8 text-lg transition-all duration-300 transform hover:scale-105 cursor-pointer rounded-lg inline-block">
+                    Contact Us to Apply
+                </router-link>
+            </div>
+        </div>
+    </section>
 
   </div>
 </template>
-
-<style scoped>
-/* Esta é a ÚNICA tag <style>
-  Adicione aqui estilos específicos, se necessário.
-  'scoped' garante que estes estilos só se aplicam a este componente.
-*/
-</style>

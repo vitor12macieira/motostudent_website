@@ -4,9 +4,13 @@ import PrototypeView from '../views/PrototypeView.vue'
 import TeamView from '../views/TeamView.vue'
 import SponsorsView from '@/views/SponsorsView.vue'
 import ContactUsView from '@/views/ContactUsView.vue'
+import PrototypeDetailView from '@/views/PrototypeDetailView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  scrollBehavior() {
+    return { top: 0 }
+  },
   routes: [
     {
       path: '/',
@@ -22,6 +26,12 @@ const router = createRouter({
       path: '/team',
       name: 'team',
       component: TeamView,
+    },
+    {
+      path: '/prototype/:id', // <--- Nova rota dinâmica
+      name: 'prototype-detail',
+      component: PrototypeDetailView,
+      props: true
     },
     {
       path: '/sponsors',

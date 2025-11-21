@@ -16,7 +16,6 @@ const prototypes = ref([
             range: "200 km",
             weight: "180 kg"
         },
-        detailsPage: '/team/prototype-1'
     },
     {
         id: 2,
@@ -31,7 +30,6 @@ const prototypes = ref([
             range: "TBD",
             weight: "TBD"
         },
-        detailsPage: null
     }
 ]);
 
@@ -126,8 +124,12 @@ function subscribeNewsletter() {
                             </div>
                         </div>
                         
-                        <router-link v-if="proto.detailsPage" :to="proto.detailsPage" class="w-full block text-center bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105">
-                            <i class="fas fa-eye mr-2"></i>
+                        <router-link 
+                            v-if="proto.status === 'available'" 
+                            :to="{ name: 'prototype-detail', params: { id: proto.id } }" 
+                            class="w-full block text-center bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-black font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105"
+                        >
+                        <i class="fas fa-eye mr-2"></i>
                             View Details
                         </router-link>
                         <div v-else class="flex items-center justify-center py-3 px-4 bg-gray-700 rounded-lg">
